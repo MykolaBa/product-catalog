@@ -1,0 +1,163 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--product-card-min-width)), var(--product-card-max-width))
+  );
+  gap: var(--space-10);
+  justify-content: start;
+}
+
+.product-card {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--duration-card) ease,
+    box-shadow var(--duration-card) ease,
+    border-color var(--duration-card) ease;
+}
+
+.product-card:hover {
+  border-color: var(--color-selected-card-border);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(var(--hover-lift-md));
+}
+
+.product-card--favorite {
+  border-color: var(--color-favorite);
+  box-shadow: var(--shadow-favorite);
+}
+
+.product-card--compared {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-compared);
+}
+
+.product-image-wrap {
+  display: grid;
+  aspect-ratio: var(--product-image-aspect-ratio);
+  place-items: center;
+  background: var(--color-image-surface);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--space-10);
+}
+
+.product-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: var(--space-10);
+}
+
+.product-category,
+.product-brand {
+  margin: var(--space-0);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  text-transform: capitalize;
+}
+
+.product-category {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-heavy);
+}
+
+.product-card h3 {
+  margin: var(--space-4) var(--space-0);
+  color: var(--color-text);
+  font-size: var(--font-size-card-title);
+  line-height: var(--line-height-card-title);
+}
+
+.product-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin: auto var(--space-0) var(--space-0);
+}
+
+.product-facts div {
+  min-width: var(--space-0);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-soft);
+  padding: var(--space-6);
+}
+
+.product-facts dt {
+  color: var(--color-text-soft);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.product-facts dd {
+  margin: var(--space-1) var(--space-0) var(--space-0);
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-heavy);
+}
+
+.discount-badge {
+  align-self: flex-start;
+  border: var(--border-width) solid var(--color-discount-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-discount-surface);
+  color: var(--color-discount);
+  padding: var(--space-2) var(--space-6);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-heavy);
+}
+
+.product-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.action-button {
+  width: 100%;
+  min-height: var(--action-min-height);
+  border: var(--border-width) solid var(--color-border-control);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font-weight: var(--font-weight-heavy);
+  transition:
+    background var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    transform var(--duration-fast) ease;
+}
+
+.action-button:hover {
+  border-color: var(--color-text-soft);
+  background: var(--color-surface-muted);
+  transform: translateY(var(--hover-lift-sm));
+}
+
+.action-button--selected {
+  border-color: var(--color-favorite);
+  background: var(--color-favorite-surface);
+  color: var(--color-favorite-strong);
+}
+
+.action-button--compare.action-button--selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-surface);
+  color: var(--color-accent-strong);
+}

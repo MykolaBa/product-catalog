@@ -1,0 +1,22 @@
+.status-message {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-card);
+}
+
+.status-message--error {
+  border-color: var(--color-danger-border);
+  background: var(--color-danger-surface);
+}
+
+.status-message h2 {
+  margin: var(--space-0);
+  color: var(--color-text);
+}
+
+.status-message p {
+  margin: var(--space-4) var(--space-0) var(--space-0);
+  color: var(--color-text-muted);
+}

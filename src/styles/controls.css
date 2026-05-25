@@ -1,0 +1,93 @@
+.catalog-controls {
+  margin: var(--space-0) var(--space-0) var(--space-11);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-card);
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(var(--field-min-width), 2fr)
+    minmax(var(--category-filter-min-width), 1fr)
+    minmax(var(--sort-filter-min-width), 1fr);
+  gap: var(--space-8);
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  min-width: var(--space-0);
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.field--wide {
+  min-width: var(--field-min-width);
+}
+
+.field label,
+.toggle-group {
+  color: var(--color-label);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-heavy);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: var(--control-min-height);
+  border: var(--border-width) solid var(--color-border-control);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: var(--space-6) var(--space-7);
+  transition:
+    border-color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.field input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.field input:hover,
+.field select:hover {
+  border-color: var(--color-border-hover);
+}
+
+.toggle-group {
+  display: flex;
+  min-height: var(--control-min-height);
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.checkbox-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: var(--space-6) var(--space-7);
+  transition:
+    background var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.checkbox-field:hover {
+  border-color: var(--color-border-hover);
+}
+
+.checkbox-field input {
+  width: var(--space-10);
+  height: var(--space-10);
+  margin: var(--space-0);
+  accent-color: var(--color-accent);
+}

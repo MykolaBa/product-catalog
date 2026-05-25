@@ -1,0 +1,182 @@
+:root {
+  --font-family-base:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  /* Фони */
+  --color-page: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+  --color-surface-soft: #f4f7fa;
+  --color-image-surface: #e2e8f0;
+
+  /* Тексти */
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-soft: #64748b;
+  --color-label: #334155;
+  --color-placeholder: #94a3b8;
+
+  /*  Рамки */
+  --color-border: #e2e8f0;
+  --color-border-control: #cbd5e1;
+  --color-border-hover: #64748b;
+
+  /* Фокус та Первинні елементи */
+  --color-focus: #6366f1;
+  --color-primary: #4f46e5;
+  --color-primary-surface: #e0e7ff;
+  --color-primary-surface-hover: #c7d2fe;
+  --color-primary-border: #c7d2fe;
+  --color-primary-border-hover: #4f46e5;
+
+  /* Акцент та рамки */
+  --color-accent: #0d9488;
+  --color-accent-strong: #115e59;
+  --color-accent-surface: #ccfbf1;
+
+  /* Обране */
+  --color-favorite: #d97706;
+  --color-favorite-strong: #92400e;
+  --color-favorite-surface: #fef3c7;
+
+  /* Знижки */
+  --color-discount: #c2410c;
+  --color-discount-border: #ffedd5;
+  --color-discount-surface: #fff7ed;
+
+  /* Помилка */
+  --color-danger: #e11d48;
+  --color-danger-border: #ffe4e6;
+  --color-danger-border-hover: #fb7185;
+  --color-danger-surface: #fff1f2;
+  --color-danger-surface-hover: #ffe4e6;
+
+  /* Таблиці та Картки */
+  --color-table-border: #f1f5f9;
+  --color-selected-card-border: #818cf8;
+
+  --shadow-summary: 0 12px 28px rgba(23, 32, 51, 0.06);
+  --shadow-card: 0 12px 30px rgba(23, 32, 51, 0.08);
+  --shadow-card-hover: 0 18px 42px rgba(23, 32, 51, 0.12);
+  --shadow-favorite: 0 16px 36px rgba(180, 83, 9, 0.14);
+  --shadow-compared: 0 16px 36px rgba(15, 118, 110, 0.14);
+  --shadow-toast: 0 16px 38px rgba(23, 32, 51, 0.18);
+
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+  --visually-hidden-size: 1px;
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 7px;
+  --space-4: 8px;
+  --space-5: 9px;
+  --space-6: 10px;
+  --space-7: 12px;
+  --space-8: 14px;
+  --space-9: 16px;
+  --space-10: 18px;
+  --space-11: 22px;
+  --space-12: 24px;
+  --space-13: 26px;
+  --space-14: 28px;
+  --space-15: 30px;
+  --space-16: 36px;
+  --space-17: 40px;
+  --space-18: 42px;
+  --space-19: 44px;
+  --space-20: 56px;
+
+  --font-size-xs: 0.72rem;
+  --font-size-sm: 0.78rem;
+  --font-size-md: 0.82rem;
+  --font-size-base: 0.9rem;
+  --font-size-body: 0.92rem;
+  --font-size-intro: 1.05rem;
+  --font-size-card-title: 1.12rem;
+  --font-size-section-title: 1.4rem;
+  --font-size-summary: 1.5rem;
+  --font-size-hero-min: 2rem;
+  --font-size-hero-fluid: 5vw;
+  --font-size-hero-max: 4rem;
+
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+  --line-height-tight: 1;
+  --line-height-card-title: 1.25;
+
+  --app-max-width: 1180px;
+  --app-gutter: 32px;
+  --app-gutter-mobile: 24px;
+  --viewport-width: 100vw;
+  --viewport-height: 100vh;
+  --breakpoint-mobile: 700px;
+  --body-min-width: 320px;
+  --control-min-height: 44px;
+  --action-min-height: 42px;
+  --product-card-min-width: 240px;
+  --product-card-max-width: 280px;
+  --product-image-aspect-ratio: 4 / 3;
+  --field-min-width: 260px;
+  --category-filter-min-width: 180px;
+  --sort-filter-min-width: 190px;
+  --summary-min-width: 96px;
+  --intro-max-width: 620px;
+  --compare-table-min-width: 720px;
+  --compare-image-width: 120px;
+  --compare-image-height: 96px;
+  --compare-image-cell-min-width: 150px;
+  --compare-row-label-width: 140px;
+  --toast-max-width: 420px;
+  --toast-bottom-offset: 18px;
+  --toast-slide-distance: 10px;
+  --focus-outline-width: 3px;
+  --focus-outline-offset: 3px;
+  --hover-lift-sm: -1px;
+  --hover-lift-md: -3px;
+
+  --duration-fast: 160ms;
+  --duration-card: 180ms;
+  --duration-toast: 200ms;
+  --duration-reduced-motion: 0.01ms;
+
+  font-family:
+    var(--font-family-base);
+  color: var(--color-text);
+  background: var(--color-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: var(--body-min-width);
+  min-height: var(--viewport-height);
+  margin: var(--space-0);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-focus);
+  outline-offset: var(--focus-outline-offset);
+}
+
+img {
+  display: block;
+}
